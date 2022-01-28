@@ -1,9 +1,10 @@
-const apiKey = "b913e7a6db7c04b8869c9aad1210a3ab";
+var myKey = config.MY_KEY;
+var secretKey = config.SECRET_KEY;
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 
-const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=` + myKey + secretKey;
 
 async function getWeatherByLocation(city) {
     const resp = await fetch(url(city), {
