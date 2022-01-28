@@ -3,7 +3,7 @@ const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 
-const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}`;
+const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${My_Key}`;
 
 async function getWeatherByLocation(city) {
     const resp = await fetch(url(city), {
